@@ -1,0 +1,187 @@
+	/* Estrutura Base */
+	.hero{
+		justify-self: center;
+		background: #000;
+		max-width: 440px;
+		padding: 0px;
+		margin: 0px;
+		column-gap: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+
+	/* Section Slide */
+
+	.slide{
+		width: 440px;
+		padding: 0px;
+		margin: 0px;
+		display: flex;
+		flex-direction: row;
+		gap: 0px;
+		pointer-events: none;
+		height: 300px;
+		overflow: hidden;
+		z-index: 1;
+		position: relative;
+	}
+
+	.slide:after{
+    content: "";
+    width: 440px;
+    height: 300px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: linear-gradient(180deg, #000 0%, transparent 35%, transparent 45%, #000 100%);
+    }
+
+    /* Section Textos */
+
+    p, h1{
+    	color: #fff;
+    	font-family: 'Figtree', sans-serif;
+    	margin: 0px;
+    	margin-block: 0px;
+    }
+
+
+    .text{
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+    	column-gap: 10px;
+    	row-gap: 10px;
+    	max-width: 340px;
+    	z-index: 3;
+    }
+
+    .iconlist1{
+    	display: flex;
+    	flex-direction: row;
+    	flex-wrap: nowrap;
+    	column-gap: 5px;
+    	padding: 10px 15px;
+    	border-radius: 120px;
+    	box-shadow: 0 0 1px 1px #ffffff30;
+		background: linear-gradient(244deg, rgba(255, 255, 255, 0.17) 0%, transparent 100%);
+    }
+
+    .iconlist1 p{
+    	font-size: 13px;
+    	line-height: 1em;
+    	word-spacing: -2px;
+    }
+
+    svg.trofeu{
+    	width: 20px;
+    	height: auto;
+    }
+
+    .titulo{
+    	text-align: center;
+    	font-size: 29px;
+    	font-weight: 300;
+     }
+
+    .titulo b{
+    	font-weight: 600;
+    }
+
+    .iconlist2{
+    	display: flex;
+    	flex-direction: row;
+    	row-gap: 10px;
+    	column-gap: 10px;
+    }
+
+    .list{
+    	display: flex;
+    	flex-direction: row;
+    	flex-wrap: nowrap;
+    	gap: 5px;
+    }
+
+    svg.check{
+    	width: 14px;
+    }
+
+    .list p{
+    	font-size: 13px;
+    }
+
+    .chamadabtn{
+    	font-size: 16px;
+    	font-weight: 800;
+    	text-align: center;
+    	text-transform: uppercase;
+    }
+
+	/* Carroseis */
+
+	.container-carrosseis {
+		display: flex;
+		width: 100%;
+		overflow: hidden;
+		gap: 10px;
+	}
+
+	.carrossel {
+		width: 136px;
+		height: 100%;
+		position: relative;
+	}
+
+	.track {
+		display: flex;
+		flex-direction: column;
+		animation: scroll-up 10s linear infinite;
+		gap: 10px;
+	}
+
+	.carrossel img {
+		width: 100%;
+		height: auto;
+	}
+
+	.vertical-up .track {
+		animation: scroll-up 30s linear infinite;
+	}
+
+	.vertical-down .track {
+		animation: scroll-down 30s linear infinite;
+	}
+
+	@keyframes scroll-up {
+		0% {
+			transform: translateY(0%);
+		}
+		100% {
+			transform: translateY(-50%);
+		}
+	}
+
+	@keyframes scroll-down {
+		0% {
+			transform: translateY(-50%);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+
+	/* REMOVER */
+	body{
+		margin: 0px;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
